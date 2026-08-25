@@ -7,6 +7,6 @@
 - /api/v1/problems/ping
   - because the api route starts with /api
 
-/api -> /v1 -> /problems -> /ping
+api -> /v1 -> /problems -> /ping
 
     apiRouter -> v1Router -> problemRouter -> problemController  -> service layer
