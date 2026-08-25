@@ -1,0 +1,19 @@
+{
+  "name": "algocode_problem_service",
+  "version": "1.0.0",
+  "description": "This is an admin service to manage problems of the Algocode platforms",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/schnkumar762/SK_algocode_problem_service.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/schnkumar762/SK_algocode_problem_service/issues"
+  },
+  "homepage": "https://github.com/schnkumar762/SK_algocode_problem_service#readme"
+}
