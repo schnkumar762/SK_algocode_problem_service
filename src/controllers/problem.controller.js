@@ -19,23 +19,41 @@ function addProblem(req, res, next) {
 
 function getProblem(req, res, next) {
   try {
-    console.log("get one");
-  } catch (e) {}
+    console.log("get problem clicked");
+    throw new NotImplementedError("getProblem");
+    // throw new BadRequest("Login", {});
+  } catch (error) {
+    next(error);
+  }
 }
 
 function getProblems(req, res, next) {
   try {
-    console.log("get all");
-  } catch (e) {}
+    console.log("get problems clicked");
+    throw new NotImplementedError("getProblems");
+    // throw new BadRequest("Login", {});
+  } catch (error) {
+    next(error);
+  }
 }
 
 function deleteProblem(req, res, next) {
   try {
-  } catch (e) {}
+    console.log("delete problem clicked");
+    throw new NotImplementedError("deleteProblem");
+    // throw new BadRequest("Login", {});
+  } catch (error) {
+    next(error);
+  }
 }
 function updateProblem(req, res, next) {
   try {
-  } catch (e) {}
+    console.log("update problem clicked");
+    throw new NotImplementedError("updateProblem");
+    // throw new BadRequest("Login", {});
+  } catch (error) {
+    next(error);
+  }
 }
 module.exports = {
   pingProblemController,
