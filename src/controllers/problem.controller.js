@@ -6,8 +6,6 @@ const { ProblemService } = require("../services");
 
 const { ProblemRepository } = require("../repositories");
 
-const BadRequest = require("../errors/badrequest.error");
-
 const problemService = new ProblemService(new ProblemRepository());
 
 function pingProblemController(req, res) {
@@ -38,11 +36,15 @@ function getProblem(req, res, next) {
   }
 }
 
-function getProblems(req, res, next) {
+async function getProblems(req, res, next) {
   try {
-    console.log("get problems clicked");
-    throw new NotImplementedError("getProblems");
-    // throw new BadRequest("Login", {});
+    const response = await problemService.getAllProblems();
+    return res.status(StatusCodes.OK).json({
+      success: true,
+      message: "Successfully fetched all the problems",
+      error: {},
+      data: response,
+    });
   } catch (error) {
     next(error);
   }
