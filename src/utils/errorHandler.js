@@ -7,14 +7,14 @@ function errorHandler(err, req, res, next) {
       success: false,
       message: err.message,
       error: err.details,
-      data: { hi: "Sachin" }, // because this is an exception so no data is going to provide
+      data: {}, // because this is an exception so no data is going to provide
     });
   }
   return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({
     success: false,
     message: "Something went wrong",
     error: err,
-    data: { hi: "niche wala" }, // because this is an exception so no data is going to provide
+    data: {}, // because this is an exception so no data is going to provide
   });
 }
 
