@@ -6,7 +6,25 @@ const winston = require("winston");
 const { LOG_DB_URL } = require("./server.config");
 require("winston-mongodb");
 
+// const { Writable } = require("stream");
+// const { logToCosmosDB } = require("../clientapis/cosmosClient");
+
 const allowedTransports = [];
+
+// const cosmosDBStream = new Writable({
+//   write: (chunk, encoding, callback) => {
+//     const message = chunk.toString();
+//     console.log("Log intercepted in custom transport:", message);
+//     logToCosmosDB("error", message);
+//     callback(); // Call the callback to indicate that the write operation is complete
+//   },
+// });
+
+// const customStreamTransport = new winston.transports.Stream({
+//   stream: cosmosDBStream,
+// });
+
+// allowedTransports.push(customStreamTransport);
 
 // the below transport config enables logging on the console
 
@@ -62,6 +80,8 @@ const logger = winston.createLogger({
   ),
   transports: allowedTransports,
 });
+
+//writeable stream to log to cosmos db
 
 module.exports = logger;
 
